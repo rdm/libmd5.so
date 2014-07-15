@@ -6,4 +6,4 @@ clean:
 	rm *.o *.so
 
 test: libmd5.so
-	jconsole md5test.ijs
+	jc md5test.ijs
