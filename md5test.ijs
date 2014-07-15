@@ -9,7 +9,7 @@ match=:4 :0
   9!:7]9 1 1#'+|-'
   9!:27 'exit 63 [ echo ''Oops... this is bad.'''
   9!:29]1
-  md5raw=: ((1!:43''),'/libmd5.so MD5String > i *c i')&(15!:0)@(;#)
+  md5raw=: ((1!:43''),'/libmd5.so MD5String > x *c i')&(15!:0)@(;#)
   md5=: 3 :',tolower hfd a.i. 15!:1 (md5raw y),0 16 2'
   try. 
     'd41d8cd98f00b204e9800998ecf8427e' match md5 ''
