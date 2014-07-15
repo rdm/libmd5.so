@@ -9,8 +9,7 @@ match=:4 :0
   9!:7]9 1 1#'+|-'
   9!:27 'exit 63 [ echo ''Oops... this is bad.'''
   9!:29]1
-  md5raw=: ((1!:43''),'/libmd5.so MD5String > x *c i')&(15!:0)@(;#)
-  md5=: 3 :',tolower hfd a.i. 15!:1 (md5raw y),0 16 2'
+  load (1!:43''),'/md5.ijs'
   try. 
     'd41d8cd98f00b204e9800998ecf8427e' match md5 ''
     '0cc175b9c0f1b6a831c399e269772661' match md5,'a'
@@ -20,7 +19,7 @@ match=:4 :0
     'd174ab98d277d9f5a5611c2c9f419d9f' match md5 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     '57edf4a22be3c955ac49da2e2107b67a' match md5 '12345678901234567890123456789012345678901234567890123456789012345678901234567890'
   catch.
-    if. errnum=. {.15!:10 '' do.
+    if. errnum=. {.cder '' do.
       echo 15!:11 ''
       exit errnum
     else.
